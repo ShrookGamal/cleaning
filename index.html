@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة تنظيف بالرياض - خدمات احترافية</title>
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-area">
+                <img src="images/logo-removebg-preview (2).png" alt="Logo" class="logo-img">
+                <!-- استبدلي logo.png بصورتك -->
+                <h1 class="brand-name">لمعة <span> التنظيف</span></h1>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li class="active"><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="#services"><i class="fas fa-concierge-bell"></i> خدماتنا</a></li>
+                    <li><a href="#gallery"><i class="fas fa-concierge-bell"></i> اعمالنا</a></li>
+                    <li><a href="#features"><i class="fas fa-star"></i> لماذا نحن؟</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:0557491982" class="call-btn">
+                    <i class="fas fa-phone-alt"></i> اتصل بنا
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-animation"></div> <!-- هنا توضع خلفية الأنميشن -->
+        <div class="container hero-content">
+            <div class="text-box">
+                <h2 class="animate-text">نعتني بمنزلك.. كأنه مملكتنا الخاصة</h2>
+                <p class="animate-p">نقدم أفضل خدمات التنظيف الشامل، عزل الخزانات، مكافحة الحشرات، وتنسيق الحدائق في
+                    الرياض بأحدث التقنيات وأيدي عاملة خبيرة.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn btn-primary">إكتشف خدماتنا <i class="fas fa-arrow-left"></i></a>
+                    <a href="#contact" class="btn btn-outline">تواصل معنا <i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="hero-floating-icons">
+                <i class="fas fa-shield-alt icon-1"></i>
+                <i class="fas fa-droplet icon-2"></i>
+                <i class="fas fa-leaf icon-3"></i>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <!-- جهة الكلام مقسم بشكل عصري -->
+                <div class="about-text" data-aos="fade-right">
+                    <span class="sub-title">تعرف علينا أكثر</span>
+                    <h2 class="main-title">رائدون في عالم <span>النظافة والخدمات المتكاملة</span> بالرياض</h2>
+                    <p class="desc">
+                        نحن لسنا مجرد شركة تنظيف، بل نحن شركاؤك في بناء بيئة صحية وآمنة. تأسست شركتنا لتلبي تطلعات سكان
+                        مدينة الرياض في الحصول على خدمات منزلية احترافية تجمع بين الجودة العالية والسعر المناسب.
+                    </p>
+
+                    <!-- نقاط القوة (بدل المقال) -->
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fas fa-user-shield"></i></div>
+                            <div class="feat-content">
+                                <h3>عمالة مدربة</h3>
+                                <p>نمتلك فرق عمل محترفة تم اختيارها بعناية فائقة لضمان الأمانة والإتقان.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fas fa-magic"></i></div>
+                            <div class="feat-content">
+                                <h3>أحدث المعدات</h3>
+                                <p>نستخدم تكنولوجيا التنظيف بالبخار وأقوى مواد التعقيم المعتمدة عالمياً.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fas fa-clock"></i></div>
+                            <div class="feat-content">
+                                <h3>التزام تام</h3>
+                                <p>نحترم وقتك، لذا نلتزم بالمواعيد المحددة بدقة متناهية وسرعة في الإنجاز.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
+                            <div class="feat-content">
+                                <h3>ضمان الخدمة</h3>
+                                <p>رضاكم هو هدفنا، لذا نقدم ضمانات حقيقية على كافة خدمات العزل والتنظيف.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#services" class="btn btn-primary">اكتشف لماذا نحن الأفضل</a>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-frame">
+                        <img src="images/pexels-polina-tankilevitch-4440525.jpg" alt="من نحن - شركة تنظيف">
+                        <!-- استبدلي الصورة هنا -->
+                        <div class="experience-badge">
+                            <span class="num">+15</span>
+                            <span class="txt">عاماً من الخبرة</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title reveal">ماذا نقدم لك؟</span>
+                <h2 class="main-title reveal">خدماتنا <span>الاحترافية</span> بالرياض</h2>
+                <div class="line reveal"></div>
+            </div>
+
+            <div class="services-grid">
+                <!-- خدمة 1 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>تنظيف الشقق والفلل</h3>
+                    <p>تنظيف شامل وعميق للغرف، المطابخ، والواجهات بأحدث أدوات الجلي والتلميع.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 2 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>تنظيف المجالس والكنب</h3>
+                    <p>غسيل وتنظيف السجاد والكنب بالبخار لإزالة أصعب البقع والروائح الكريهة.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 3 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>تنظيف وعزل الخزانات</h3>
+                    <p>تعقيم الخزانات وعزلها بمواد آمنة تمنع التسريب وتحافظ على نقاء المياه.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 4 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>مكافحة الحشرات ورش المبيدات</h3>
+                    <p>إبادة فورية للنمل الأبيض، الصراصير، والقوارض بمبيدات آمنة وفعالة.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 5 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>تنسيق حدائق بالرياض</h3>
+                    <p>تصميم وتنسيق الحدائق، تركيب الثيل الصناعي، وصيانة الأشجار والزهور.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 6 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>تسليك المجاري</h3>
+                    <p>حلول سريعة ونهائية لانسداد المجاري والبيارات بأحدث سيارات الشفط والضغط.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 7 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>عزل الأسطح</h3>
+                    <p>حماية منزلك من حرارة الصيف وأمطار الشتاء بأقوى مواد العزل الحراري والمائي.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- خدمة 8 -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3>تنظيف المداخن</h3>
+                    <p>إزالة الدهون والترسبات من مداخن المطاعم والمنازل لضمان السلامة التامة.</p>
+                    <a href="tel:0557491982" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section With Filter -->
+    <section class="gallery-section" id="gallery">
+        <div class="custom-container">
+            <div class="section-header">
+                <span class="sub-title reveal">أعمالنا على أرض الواقع</span>
+                <h2 class="main-title reveal">معرض <span>الإنجازات</span></h2>
+                <div class="line reveal"></div>
+            </div>
+            <!-- الفلتر (Filter Menu) -->
+            <div class="filter-menu reveal">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="photo">الصور</button>
+                <button class="filter-btn" data-filter="video">الفيديوهات</button>
+            </div>
+
+            <!-- شبكة الصور (الصور أولاً ثم الفيديو) -->
+            <div class="gallery-wrapper reveal">
+
+                <!-- صورة 1 -->
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 10.05.40 AM (1).jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- صورة 2 -->
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 10.05.40 AM (2).jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- صورة 3 -->
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 10.05.40 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- صورة 4 -->
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 10.05.41 AM (1).jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 10.05.41 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 11.33.13 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 11.33.14 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 11.33.15 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-card photo">
+                    <img src="images/WhatsApp Image 2026-01-28 at 11.33.17 AM.jpeg" alt="Work">
+                    <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <!-- الفيديو في النهاية -->
+                <div class="gallery-card video">
+                    <video controls poster="video-thumb.jpg">
+                        <source src="images/WhatsApp Video 2026-01-28 at 11.33.17 AM.mp4" type="video/mp4">
+                    </video>
+                    <span class="video-label">فيديو العمل <i class="fas fa-play"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Why Us Section - Creative Pyramidal Layout -->
+    <section class="why-us-creative" id="features">
+        <div class="container flex-vertical">
+            <div class="section-header">
+                <span class="sub-title reveal">تميزنا سر نجاحنا</span>
+                <h2 class="main-title reveal">ما الذي يجعلنا <span>في القمة؟</span></h2>
+                <div class="line reveal"></div>
+            </div>
+
+            <!-- هذه هي الشبكة التي ستعرض العناصر بجانب بعضها -->
+            <div class="pyramid-grid">
+
+                <!-- ميزة 1 (مرتفعة) -->
+                <div class="pyramid-card reveal">
+                    <div class="card-num">01</div>
+                    <div class="card-icon"><i class="fas fa-gem"></i></div>
+                    <h3>جودة ملكية</h3>
+                    <p>نقدم نظافة تفوق الخيال، نهتم بأصغر التفاصيل التي قد لا تراها عينك ولكن تشعر بها روحك.</p>
+                </div>
+
+                <!-- ميزة 2 (منخفضة - تخلق شكل الهرم) -->
+                <div class="pyramid-card reveal staggered">
+                    <div class="card-num">02</div>
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>أمان مطلق</h3>
+                    <p>عمالتنا ليست مجرد موظفين، بل هم شركاء ثقة تم اختيارهم بعناية لضمان أمن منزلك.</p>
+                </div>
+
+                <!-- ميزة 3 (مرتفعة) -->
+                <div class="pyramid-card reveal">
+                    <div class="card-num">03</div>
+                    <div class="card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>سرعة البرق</h3>
+                    <p>وقتك غالٍ علينا، لذا نصلك في الموعد وننجز العمل بجودة احترافية في وقت قياسي.</p>
+                </div>
+
+                <!-- ميزة 4 (منخفضة) -->
+                <div class="pyramid-card reveal staggered">
+                    <div class="card-num">04</div>
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3>تكنولوجيا متطورة</h3>
+                    <p>نستخدم أحدث ما توصل إليه العلم في جلي الرخام وتنظيف البخار لنتائج تبهرك.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section class="contact-area" id="contact">
+        <div class="contact-bg-image"></div>
+
+        <!-- استخدمنا container-wide لزيادة العرض -->
+        <div class="container container-wide">
+            <div class="contact-wrapper-grid">
+
+                <!-- الكارت الأول: بيانات التواصل -->
+                <div class="contact-info-card reveal-left">
+                    <div class="card-head">
+                        <i class="fas fa-headset"></i>
+                        <h3>تواصل معنا مباشرة</h3>
+                        <p>نحن متاحون لخدمتكم والإجابة على استفساراتكم</p>
+                    </div>
+
+                    <div class="info-links">
+                        <!-- الرقم الأول + واتساب -->
+                        <a href="https://wa.me/966557491982" class="info-item whatsapp">
+                            <div class="i-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="i-details">
+                                <span>واتساب واستفسارات</span>
+                                <strong>0557491982</strong>
+                            </div>
+                        </a>
+
+                        <!-- الرقم الأول اتصال -->
+                        <a href="tel:0557491982" class="info-item phone">
+                            <div class="i-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="i-details">
+                                <span>رقم الجوال (1)</span>
+                                <strong>0557491982</strong>
+                            </div>
+                        </a>
+
+                        <!-- الرقم الثاني الجديد -->
+                        <a href="tel:0539076957" class="info-item phone-alt">
+                            <div class="i-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="i-details">
+                                <span>رقم الجوال (2)</span>
+                                <strong>0539076957</strong>
+                            </div>
+                        </a>
+
+                        <!-- انستجرام -->
+                        <a href="https://www.instagram.com/elmmlaka2?igsh=MWk0ZnpndHAxajJycg==" target="_blank"
+                            class="info-item instagram">
+                            <div class="i-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="i-details">
+                                <span>تابعنا على انستجرام</span>
+                                <strong>Elmmlaka2</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- الكارت الثاني: اطلب خدمة -->
+                <div class="contact-form-card reveal-right">
+                    <div class="card-head">
+                        <i class="fas fa-edit"></i>
+                        <h3>اطلب خدمتك الآن</h3>
+                        <p>اترك بياناتك وسيقوم فريقنا بالتواصل معك فوراً</p>
+                    </div>
+
+                    <form action="#" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="الاسم بالكامل" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="رقم الجوال" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>ما هي الخدمة التي تحتاجها؟</option>
+                                <option value="تنظيف">تنظيف شقق وفلل</option>
+                                <option value="عزل">عزل خزانات وأسطح</option>
+                                <option value="حشرات">مكافحة حشرات ورش مبيدات</option>
+                                <option value="حدائق">تنسيق حدائق وصيانة</option>
+                                <option value="مجاري">تسليك مجاري وبيارات</option>
+                                <option value="أخرى">خدمات أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="ملاحظات إضافية (اختياري)" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">إرسال الطلب الآن <i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+
+            <!-- العمود الأول: الهوية -->
+            <div class="footer-col identity-col">
+                <div class="footer-logo">
+                    <img src="images/logo-removebg-preview (2).png" alt="لمعة التنظيف">
+                    <h2>لمعة <span>التنظيف</span></h2>
+                </div>
+                <p class="footer-desc">
+                    نحن رواد النظافة والتعقيم في الرياض. نقدم حلولاً متكاملة لتنظيف المنازل، عزل الخزانات، ومكافحة
+                    الحشرات بأحدث التقنيات لضمان بيئة صحية وآمنة لعائلتك.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/elmmlaka2?igsh=MWk0ZnpndHAxajJycg==" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/966557491982"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة -->
+            <div class="footer-col links-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#portfolio">معرض الأعمال</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: بيانات التواصل -->
+            <div class="footer-col contact-col">
+                <h3>معلومات التواصل</h3>
+                <div class="contact-info-list">
+                    <div class="info-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0557491982">0557491982</a>
+                    </div>
+                    <div class="info-link">
+                        <i class="fas fa-mobile-alt"></i>
+                        <a href="tel:0539076957">0539076957</a>
+                    </div>
+                    <div class="info-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/966557491982">راسلنا على واتساب</a>
+                    </div>
+                    <div class="info-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>المملكة العربية السعودية - الرياض</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- شريط الحقوق -->
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 جميع الحقوق محفوظة لشركة لمعة التنظيف</p>
+                <p class="dev-link">تصميم وبرمجة <a href="https://www.facebook.com/share/17UzqgSwiu/"
+                        target="_blank">GMTWeb</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
