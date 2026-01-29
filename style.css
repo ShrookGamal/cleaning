@@ -846,24 +846,22 @@ body {
     align-items: center;
 }
 
-/* طبقة الصورة الخلفية والبلور */
 .contact-bg-image {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('images/pexels-polina-tankilevitch-4440525.jpg'); /* ضعي رابط صورتك هنا */
+    background-image: url('images/pexels-polina-tankilevitch-4440525.jpg'); 
     background-size: cover;
     background-position: center;
-    filter: blur(5px) brightness(0.7); /* بلور وتقليل سطوع لتبرز الكروت */
-    transform: scale(1.1); /* لضمان عدم ظهور حواف بيضاء بسبب البلور */
+    filter: blur(5px) brightness(0.7); 
+    transform: scale(1.1); 
     z-index: 1;
 }
 
 .contact-area .container {
     position: relative;
-    z-index: 2; /* لتكون فوق الخلفية */
+    z-index: 2; 
 }
 
-/* الشبكة: كارتين بجانب بعض */
 .contact-wrapper-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -871,7 +869,6 @@ body {
     width: 100%;
 }
 
-/* الكروت الزجاجية */
 .contact-info-card, .contact-form-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
@@ -898,7 +895,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* ستايل روابط التواصل */
 .info-links {
     display: flex;
     flex-direction: column;
@@ -932,7 +928,6 @@ body {
 
 .info-item:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
-/* ستايل الفورم */
 .order-form .form-group { margin-bottom: 20px; }
 
 .order-form input, .order-form select {
@@ -966,13 +961,11 @@ body {
 
 .submit-btn:hover { background: var(--primary-blue); transform: translateY(-5px); }
 
-/* ريسبونسيف الموبايل */
 @media (max-width: 992px) {
     .contact-wrapper-grid { grid-template-columns: 1fr; }
     .contact-area { padding: 60px 0; }
 }
 
-/* انميشن إضافي للظهور من الجانبين */
 .reveal-left { opacity: 0; transform: translateX(50px); transition: 1s ease; }
 .reveal-right { opacity: 0; transform: translateX(-50px); transition: 1s ease; }
 
@@ -980,33 +973,30 @@ body {
     opacity: 1 !important;
     transform: translateX(0) !important;
 }
-/* --- تحديث سكشن التواصل لزيادة العرض --- */
 
 .container-wide {
-    max-width: 1350px !important; /* زيادة عرض الحاوية لتعطي فخامة */
+    max-width: 1350px !important; 
 }
 
 .contact-wrapper-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px; /* تقليل الفجوة قليلاً لزيادة عرض الكروت داخلياً */
+    gap: 80px; 
     width: 100%;
 }
 
 .contact-info-card, .contact-form-card {
     background: rgba(255, 255, 255, 0.98);
-    padding: 50px; /* زيادة التباعد الداخلي */
-    border-radius: 40px; /* زوايا أكثر نعومة */
+    padding: 50px; 
+    border-radius: 40px; 
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
     transition: 0.4s ease;
 }
 
-/* ستايل الرقم الثاني */
 .phone-alt .i-icon {
-    background: var(--leaf-green); /* تمييزه بلون اللوجو الأخضر */
+    background: var(--leaf-green); 
 }
 
-/* تحسين شكل الفورم ليناسب العرض الكبير */
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1028,20 +1018,17 @@ body {
     border-color: var(--leaf-green);
 }
 
-/* أنميشن بسيط عند الهوفر على الكرت بالكامل */
 .contact-info-card:hover, .contact-form-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 40px 80px rgba(26, 77, 140, 0.2);
 }
 
-/* الموبايل */
 @media (max-width: 768px) {
     .form-row { grid-template-columns: 1fr; }
     .contact-info-card, .contact-form-card { padding: 30px 20px; }
 }
-/* --- Footer Styles --- */
 .main-footer {
-    background: #0a1d37; /* لون أزرق نيلي غامق وفخم */
+    background: #0a1d37; 
     color: #ffffff;
     padding: 80px 0 0;
     position: relative;
@@ -1049,12 +1036,10 @@ body {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr; /* جعل العمود الأول أعرض قليلاً */
+    grid-template-columns: 1.5fr 1fr 1fr; 
     gap: 40px;
     padding-bottom: 50px;
 }
-
-/* العمود الأول: اللوجو والوصف */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -1102,8 +1087,6 @@ body {
     background: var(--leaf-green);
     transform: translateY(-5px);
 }
-
-/* العمود الثاني والثالث: العناوين والقوائم */
 .footer-col h3 {
     font-size: 1.3rem;
     margin-bottom: 25px;
@@ -1133,7 +1116,6 @@ body {
     padding-right: 10px;
 }
 
-/* معلومات التواصل */
 .contact-info-list {
     display: flex;
     flex-direction: column;
@@ -1150,10 +1132,8 @@ body {
 .info-link i { color: var(--leaf-green); font-size: 1.1rem; }
 .info-link a { color: inherit; text-decoration: none; transition: 0.3s; }
 .info-link a:hover { color: white; }
-
-/* شريط الحقوق الأسفل */
 .footer-bottom {
-    background: #071529; /* لون أغمق قليلاً للشريط السفلي */
+    background: #071529; 
     padding: 20px 0;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -1174,7 +1154,6 @@ body {
 
 .dev-link a:hover { text-decoration: underline; }
 
-/* ريسبونسيف الفوتر */
 @media (max-width: 992px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1184,4 +1163,131 @@ body {
     .footer-col h3::after { right: 50%; transform: translateX(50%); }
     .footer-logo, .social-icons, .info-link { justify-content: center; }
     .bottom-flex { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        width: 30px;
+        height: 3px;
+        background: var(--primary-blue);
+        transition: 0.3s;
+    }
+    .nav-menu {
+        position: fixed;
+        top: -110%; 
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 50px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1000;
+    }
+    .nav-menu.active {
+        top: 70px; 
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.2rem;
+        color: var(--primary-blue);
+    }
+    
+    .nav-menu {
+        display: block; 
+    }
+}
+
+@media (min-width: 993px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+.contact-area {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.contact-wrapper-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    width: 100%;
+}
+
+.contact-info-card, .contact-form-card {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%; 
+}
+@media (max-width: 992px) {
+    .contact-wrapper-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .reveal-left, .reveal-right {
+        transform: translateY(50px) !important; 
+        opacity: 0;
+    }
+
+    .contact-area {
+        padding: 50px 0;
+    }
+    
+    .contact-info-card, .contact-form-card {
+        padding: 30px 20px; 
+    }
+}
+.reveal-left.animate-show, .reveal-right.animate-show {
+    opacity: 1 !important;
+    transform: translate(0) !important; 
+}
+/* --- ضبط أزرار الرئيسية للموبايل --- */
+@media (max-width: 768px) {
+    .hero-btns {
+        flex-direction: column; /* تحويل الأزرار من جانب بعض ليكونوا تحت بعض */
+        gap: 15px; /* مسافة بين الزرين */
+        width: 100%;
+        align-items: center; /* توسيط الأزرار في منتصف الشاشة */
+        display: flex; /* التأكد من أن الفليكس يعمل */
+    }
+
+    .hero-btns .btn {
+        width: 100%; /* جعل الزر يأخذ عرض الحاوية */
+        max-width: 300px; /* تحديد أقصى عرض للزر لكي لا يكون طويلاً جداً بشكل سيء */
+        justify-content: center; /* توسيط النص داخل الزر */
+        padding: 15px; /* زيادة مساحة الضغط في الموبايل */
+        text-align: center;
+    }
+    
+    /* تصغير حجم النص في الهيرو ليناسب شكل الأزرار تحت بعضها */
+    .hero h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .hero p {
+        text-align: center;
+        margin: 0 auto 30px;
+    }
 }
