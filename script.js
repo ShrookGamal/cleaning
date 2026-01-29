@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     const header = document.querySelector('.main-header');
-    const navLinks = document.querySelectorAll('.nav-menu ul li');
+    const navItems = document.querySelectorAll('.nav-menu ul li'); 
     const sections = document.querySelectorAll('section');
+
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -14,11 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 spans[1].style.opacity = '0';
                 spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                resetHamburger();
             }
         });
+
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                 navMenu.classList.remove('active');
@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetHamburger() {
         const spans = menuToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        if (spans.length > 0) {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
     }
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.padding = '10px 0';
@@ -43,41 +46,56 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.background = 'rgba(255, 255, 255, 0.95)';
             header.style.boxShadow = 'none';
         }
+
         let current = "";
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 100) {
+            if (window.scrollY >= (sectionTop - 150)) {
                 current = section.getAttribute("id");
             }
         });
 
-        navLinks.forEach((li) => {
+        navItems.forEach((li) => {
             li.classList.remove("active");
-            if (li.querySelector('a').getAttribute("href") === `#${current}`) {
+            const link = li.querySelector('a');
+            if (link && link.getAttribute("href") === `#${current}`) {
                 li.classList.add("active");
             }
         });
+        
+        if (window.scrollY < 200) {
+            navItems.forEach(li => li.classList.remove("active"));
+            navItems[0].classList.add("active");
+        }
     });
 
-    document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    document.querySelectorAll('.nav-menu a, .hero-btns a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
             
-            if (targetElement) {
-                navMenu.classList.remove('active');
-                resetHamburger();
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    navMenu.classList.remove('active');
+                    resetHamburger();
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, 
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
 
-    const observerOptions = { threshold: 0.1 };
+    const observerOptions = { 
+        threshold: 0.1, 
+        rootMargin: "0px 0px -50px 0px"
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -87,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     const elementsToAnimate = document.querySelectorAll(
-        '.about-image, .about-text, .feature-item, .animate-text, .animate-p, .hero-btns, .service-card, .section-header, .gallery-item, .feature-box, .reveal-left, .reveal-right, .gallery-card, .pyramid-card'
+        '.about-image, .about-text, .feature-item, .animate-text, .animate-p, .hero-btns, .service-card, .section-header, .gallery-item, .feature-box, .reveal-left, .reveal-right, .gallery-card, .pyramid-card, .why-us-content, .features-list'
     );
     
     elementsToAnimate.forEach(el => {
@@ -106,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeBtn = document.querySelector('.filter-btn.active');
                 if (activeBtn) activeBtn.classList.remove('active');
                 btn.classList.add('active');
+
                 const filterValue = btn.getAttribute('data-filter');
+
                 galleryCards.forEach(card => {
                     if (filterValue === 'all' || card.classList.contains(filterValue)) {
                         card.style.display = 'block';
@@ -125,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
     const style = document.createElement('style');
     style.innerHTML = `
         .animate-show {
@@ -136,7 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
             transition: opacity 0.4s ease, transform 0.4s ease !important;
         }
         @media (max-width: 992px) {
-            .nav-menu.active { top: 70px !important; opacity: 1 !important; visibility: visible !important; }
+            .nav-menu { 
+                visibility: hidden; 
+                opacity: 0; 
+                pointer-events: none; 
+            }
+            .nav-menu.active { 
+                top: 70px !important; 
+                opacity: 1 !important; 
+                visibility: visible !important; 
+                pointer-events: auto !important; 
+            }
         }
     `;
     document.head.appendChild(style);
