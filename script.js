@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     const elementsToAnimate = document.querySelectorAll(
-        '.about-image, .about-text, .feature-item, .animate-text, .animate-p, .hero-btns, .service-card, .section-header, .gallery-item, .feature-box, .reveal-left, .reveal-right, .gallery-card, .pyramid-card, .why-us-content, .features-list'
+        '.hero-slogan,.about-image, .about-text, .feature-item, .animate-text, .animate-p, .hero-btns, .service-card, .section-header, .gallery-item, .feature-box, .reveal-left, .reveal-right, .gallery-card, .pyramid-card, .why-us-content, .features-list'
     );
     
     elementsToAnimate.forEach(el => {

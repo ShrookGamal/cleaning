@@ -1412,9 +1412,83 @@ body {
         display: none; 
     }
 }
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    min-height: 100vh;
+}
+
+.text-box {
+    max-width: 950px; 
+    width: 100%;
+    z-index: 5;
+}
+
+.hero-slogan {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--leaf-green);
+    background: rgba(124, 179, 66, 0.1);
+    padding: 8px 25px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #7cb342, #b2ff59, #7cb342);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine-text 3s linear infinite;
+}
+
+@keyframes shine-text {
+    to { background-position: 200% center; }
+}
+
+.animate-text {
+    font-size: 3.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.animate-p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin: 0 auto 40px !important; 
+    text-align: center; 
+    color: #444;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .animate-text {
+        font-size: 2.2rem;
+    }
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .hero-slogan {
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .animate-p {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         line-height: 1.7;
         text-align: center; 
         padding: 0 10px;
