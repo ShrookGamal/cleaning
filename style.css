@@ -1414,7 +1414,7 @@ body {
 }
 @media (max-width: 768px) {
     .animate-p {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         line-height: 1.7;
         text-align: center; 
         padding: 0 10px;
