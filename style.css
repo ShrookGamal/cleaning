@@ -167,14 +167,7 @@ body {
     text-align: justify; 
     text-justify: inter-word;
 }
-@media (max-width: 768px) {
-    .animate-p {
-        font-size: 0.95rem;
-        line-height: 1.7;
-        text-align: center; 
-        padding: 0 10px;
-    }
-}
+
 .hero-btns {
     display: flex;
     gap: 20px;
@@ -1417,5 +1410,13 @@ body {
     }
     .float-text {
         display: none; 
+    }
+}
+@media (max-width: 768px) {
+    .animate-p {
+        font-size: 0.8rem;
+        line-height: 1.7;
+        text-align: center; 
+        padding: 0 10px;
     }
 }
