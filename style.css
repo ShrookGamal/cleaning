@@ -1,8 +1,8 @@
 :root {
-    --primary-blue: #1a4d8c; /* أزرق الدرع */
-    --light-blue: #3498db; /* أزرق الماء */
-    --leaf-green: #7cb342; /* أخضر الأوراق */
-    --accent-brown: #8d6e63; /* لون الخزان/المداخن */
+    --primary-blue: #1a4d8c; 
+    --light-blue: #3498db; 
+    --leaf-green: #7cb342; 
+    --accent-brown: #8d6e63; 
     --white: #ffffff;
     --dark: #2d3436;
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -29,7 +29,6 @@ body {
     justify-content: space-between;
 }
 
-/* --- Header Styles --- */
 .main-header {
     position: fixed;
     top: 0;
@@ -63,7 +62,6 @@ body {
     color: var(--leaf-green);
 }
 
-/* Navigation */
 .nav-menu ul {
     display: flex;
     list-style: none;
@@ -89,7 +87,6 @@ body {
     color: var(--light-blue);
 }
 
-/* Active & Hover State */
 .nav-menu ul li.active a,
 .nav-menu ul li a:hover {
     color: var(--white);
@@ -101,7 +98,6 @@ body {
     color: var(--leaf-green);
 }
 
-/* Call Button */
 .call-btn {
     background: var(--leaf-green);
     color: white;
@@ -121,7 +117,6 @@ body {
     background: var(--primary-blue);
 }
 
-/* --- Hero Section --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -135,11 +130,10 @@ body {
 .hero-bg-animation {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* يمكنك هنا وضع صورة الخلفية المتحركة */
     background-image: url('images/pexels-photo-4099467.jpeg');
     background-size: cover;
     background-position: center;
-    opacity: 0.2;
+    opacity: 0.6;
     animation: zoomInOut 20s infinite alternate;
 }
 
@@ -147,6 +141,7 @@ body {
     position: relative;
     z-index: 2;
     width: 100%;
+
 }
 
 .text-box {
@@ -161,17 +156,25 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s forwards 0.3s;
+    text-align: center;
 }
-
 .animate-p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 35px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s forwards 0.5s;
+    max-width: 900px; 
+    line-height: 1.9; 
+    margin: 0 auto 40px; 
+    font-size: 1.15rem; 
+    color: #444; 
+    text-align: justify; 
+    text-justify: inter-word;
 }
-
+@media (max-width: 768px) {
+    .animate-p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: center; 
+        padding: 0 10px;
+    }
+}
 .hero-btns {
     display: flex;
     gap: 20px;
@@ -205,8 +208,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
-/* Floating Icons Animation */
 .hero-floating-icons i {
     position: absolute;
     color: var(--light-blue);
@@ -218,7 +219,6 @@ body {
 .icon-2 { font-size: 60px; bottom: 20%; left: 15%; animation-delay: 2s; color: var(--leaf-green) !important; }
 .icon-3 { font-size: 100px; top: 30%; right: 5%; animation-delay: 4s; }
 
-/* --- Mobile Menu --- */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -235,7 +235,6 @@ body {
     transition: 0.3s;
 }
 
-/* --- Animations --- */
 @keyframes fadeInUp {
     to { opacity: 1; transform: translateY(0); }
 }
@@ -256,7 +255,6 @@ body {
     to { transform: scale(1.1); }
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .nav-menu {
         position: fixed;
@@ -284,10 +282,8 @@ body {
 
     .animate-text { font-size: 2.5rem; }
 }
-/* --- About Section Styles --- */
 .about {
     padding: 100px 0;
-    /* خلفية متدرجة مستوحاة من ألوان اللوجو */
     background: linear-gradient(135deg, #ffffff 0%, #eef5ff 50%, #f0fff4 100%);
     overflow: hidden;
 }
@@ -298,8 +294,6 @@ body {
     gap: 50px;
     flex-wrap: wrap;
 }
-
-/* جهة الصورة */
 .about-image {
     flex: 1;
     min-width: 350px;
@@ -350,8 +344,6 @@ body {
 
 .experience-badge .num { font-size: 2rem; font-weight: 900; display: block; }
 .experience-badge .txt { font-size: 0.9rem; font-weight: 600; }
-
-/* جهة الكلام */
 .about-text {
     flex: 1.2;
     min-width: 350px;
@@ -382,7 +374,6 @@ body {
     line-height: 1.8;
 }
 
-/* شبكة المميزات */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -431,35 +422,29 @@ body {
     line-height: 1.5;
 }
 
-/* انميشن إضافي */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* موبايل ريسبونسيف */
 @media (max-width: 768px) {
     .features-grid { grid-template-columns: 1fr; }
     .main-title { font-size: 2rem; }
     .about { padding: 60px 0; }
 }
-/* --- سكشن الخدمات - التصميم الاحترافي --- */
 .services {
     padding: 100px 0;
     background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%);
     position: relative;
     overflow: hidden;
 }
-
-/* إصلاح مشكلة التراكم بجانب بعض - نضمن أن الحاوية ترتب العناصر عمودياً */
 .services .container {
     display: flex;
-    flex-direction: column; /* لجعل العنوان فوق والخدمات تحت */
+    flex-direction: column; 
     align-items: center;
     width: 100%;
 }
 
-/* تنسيق العنوان */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -493,15 +478,13 @@ body {
     border-radius: 10px;
 }
 
-/* شبكة الخدمات - 3 أعمدة */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     width: 100%;
 }
 
-/* تصميم كارت الخدمة */
 .service-card {
     background: #ffffff;
     padding: 40px 30px;
@@ -513,15 +496,12 @@ body {
     position: relative;
     z-index: 1;
 }
-
-/* حركة الكارت عند مرور الماوس */
 .service-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 25px 50px rgba(26, 77, 140, 0.15);
     border-color: var(--light-blue);
 }
 
-/* أيقونة الخدمة */
 .service-icon {
     width: 90px;
     height: 90px;
@@ -543,7 +523,6 @@ body {
     transform: rotateY(180deg);
 }
 
-/* نصوص الكارت */
 .service-card h3 {
     font-size: 1.4rem;
     color: var(--primary-blue);
@@ -558,7 +537,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* رابط الطلب */
 .service-link {
     display: inline-flex;
     align-items: center;
@@ -582,7 +560,6 @@ body {
     transform: translateX(-8px);
 }
 
-/* إضافة لمعة أنميشن خلف الكروت */
 .service-card::after {
     content: '';
     position: absolute;
@@ -592,9 +569,6 @@ body {
     transition: 0.5s;
 }
 
-/* --- التجاوب مع الموبايل والتابلت --- */
-
-/* تابلت (2 كارت في السطر) */
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -605,7 +579,6 @@ body {
     }
 }
 
-/* موبايل (كارت واحد في السطر) */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -617,7 +590,6 @@ body {
         padding: 30px 20px;
     }
 }
-/* --- Gallery Section Styles --- */
 .gallery-section {
     padding: 80px 0;
     background: #ffffff;
@@ -625,15 +597,13 @@ body {
     overflow: hidden;
 }
 
-/* استخدمنا كلاس جديد لضمان عدم التعارض */
 .custom-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: block !important; /* نلغي الـ flex هنا لضمان الترتيب */
+    display: block !important; 
 }
 
-/* تنسيق المنيو (الفلتر) */
 .filter-menu {
     display: flex;
     justify-content: center;
@@ -657,10 +627,9 @@ body {
     color: white;
 }
 
-/* الشبكة (Grid) - هنا الحل لظهورهم بجانب بعض */
 .gallery-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 صور في السطر */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     width: 100%;
 }
@@ -682,7 +651,6 @@ body {
     transition: 0.5s;
 }
 
-/* تأثير التكبير عند الهوفر */
 .gallery-card:hover img {
     transform: scale(1.1);
 }
@@ -690,7 +658,7 @@ body {
 .zoom-icon {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(124, 179, 66, 0.4); /* لون أخضر شفاف */
+    background: rgba(124, 179, 66, 0.4); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -701,8 +669,6 @@ body {
 .zoom-icon i { color: white; font-size: 2rem; }
 
 .gallery-card:hover .zoom-icon { opacity: 1; }
-
-/* ستايل خاص بالفيديو */
 .video-label {
     position: absolute;
     top: 10px; right: 10px;
@@ -713,48 +679,41 @@ body {
     font-size: 0.8rem;
     font-weight: bold;
 }
-
-/* التجاوب (Responsive) */
 @media (max-width: 1024px) {
-    .gallery-wrapper { grid-template-columns: repeat(3, 1fr); } /* 3 في التابلت */
+    .gallery-wrapper { grid-template-columns: repeat(3, 1fr); } 
 }
 
 @media (max-width: 768px) {
-    .gallery-wrapper { grid-template-columns: repeat(2, 1fr); } /* 2 في الموبايل */
+    .gallery-wrapper { grid-template-columns: repeat(2, 1fr); } 
 }
 
 @media (max-width: 480px) {
-    .gallery-wrapper { grid-template-columns: 1fr; } /* 1 في الموبايل الصغير */
+    .gallery-wrapper { grid-template-columns: 1fr; }
 }
 
-/* كود لإخفاء العناصر عند الفلترة */
 .gallery-card.hide {
     display: none;
 }
-/* --- Why Us Creative Layout --- */
 .why-us-creative {
     padding: 120px 0;
-    background: #d8d8e9; /* خلفية صافية جداً */
+    background: #d8d8e9; 
     position: relative;
 }
 
-/* نضمن أن الحاوية ترتب العناصر عمودياً (العنوان ثم الشبكة) */
 .flex-vertical {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* الشبكة الأساسية: 4 أعمدة بجانب بعضها */
 .pyramid-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 بجانب بعض */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
     width: 100%;
     margin-top: 50px;
 }
 
-/* تصميم الكارت الهرمي */
 .pyramid-card {
     background: #ffffff;
     padding: 40px 25px;
@@ -767,24 +726,22 @@ body {
     z-index: 1;
 }
 
-/* التأثير الهرمي (تنزيل الكروت الزوجية لأسفل) */
 .pyramid-card.staggered {
-    transform: translateY(50px); /* هذا ما يخلق شكل الهرم/الموجة */
+    transform: translateY(50px); 
 }
 
 .pyramid-card:hover {
-    transform: translateY(-10px) scale(1.05) !important; /* عند الهوفر يرتفع الكارت */
+    transform: translateY(-10px) scale(1.05) !important; 
     box-shadow: 0 25px 50px rgba(124, 179, 66, 0.15);
     border-color: var(--leaf-green);
 }
 
-/* أيقونات وأرقام زينة */
 .card-num {
     position: absolute;
     top: 20px; right: 20px;
     font-size: 3rem;
     font-weight: 900;
-    color: rgba(26, 77, 140, 0.03); /* رقم شفاف جداً للزينة */
+    color: rgba(26, 77, 140, 0.03); 
     line-height: 1;
 }
 
@@ -811,22 +768,18 @@ body {
     line-height: 1.7;
 }
 
-/* --- ريسبونسيف الموبايل (هنا نغير الشكل ليناسب الشاشة) --- */
-
-/* تابلت (2 بجانب بعض) */
 @media (max-width: 1024px) {
     .pyramid-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .pyramid-card.staggered {
-        transform: translateY(0); /* نلغي الهرم في التابلت ليكون منظماً */
+        transform: translateY(0); 
     }
 }
 
-/* موبايل (تحت بعض بشكل أنيق) */
 @media (max-width: 768px) {
     .pyramid-grid {
-        grid-template-columns: 1fr; /* عمود واحد للموبايل */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     .pyramid-card {
@@ -837,7 +790,6 @@ body {
         padding: 60px 0;
     }
 }
-/* --- Contact Section Styles --- */
 .contact-area {
     padding: 100px 0;
     position: relative;
@@ -1262,25 +1214,21 @@ body {
     opacity: 1 !important;
     transform: translate(0) !important; 
 }
-/* --- ضبط أزرار الرئيسية للموبايل --- */
 @media (max-width: 768px) {
     .hero-btns {
-        flex-direction: column; /* تحويل الأزرار من جانب بعض ليكونوا تحت بعض */
-        gap: 15px; /* مسافة بين الزرين */
+        flex-direction: column; 
+        gap: 15px; 
         width: 100%;
-        align-items: center; /* توسيط الأزرار في منتصف الشاشة */
-        display: flex; /* التأكد من أن الفليكس يعمل */
+        align-items: center; 
+        display: flex; 
     }
-
     .hero-btns .btn {
-        width: 100%; /* جعل الزر يأخذ عرض الحاوية */
-        max-width: 300px; /* تحديد أقصى عرض للزر لكي لا يكون طويلاً جداً بشكل سيء */
-        justify-content: center; /* توسيط النص داخل الزر */
-        padding: 15px; /* زيادة مساحة الضغط في الموبايل */
+        width: 100%; 
+        max-width: 300px; 
+        justify-content: center;
+        padding: 15px; 
         text-align: center;
     }
-    
-    /* تصغير حجم النص في الهيرو ليناسب شكل الأزرار تحت بعضها */
     .hero h2 {
         font-size: 2.2rem;
         text-align: center;
@@ -1291,18 +1239,15 @@ body {
         margin: 0 auto 30px;
     }
 }
-/* --- ضبط الهيدر والمنيو النهائي --- */
-
-/* الهيدر الأساسي */
 .main-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* تحديد ارتفاع ثابت لسهولة الحساب */
+    height: 70px; 
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    z-index: 2000; /* ليكون فوق كل شيء */
+    z-index: 2000; 
     display: flex;
     align-items: center;
 }
@@ -1321,7 +1266,7 @@ body {
 }
 
 .logo-img {
-    height: 50px; /* حجم اللوجو في الموبايل */
+    height: 50px; 
 }
 
 .brand-name {
@@ -1330,7 +1275,6 @@ body {
     color: var(--primary-blue);
 }
 
-/* المنيو في وضع الكمبيوتر (Desktop) */
 @media (min-width: 993px) {
     .nav-menu ul {
         display: flex;
@@ -1339,24 +1283,20 @@ body {
     }
     .menu-toggle { display: none; }
 }
-
-/* --- المنيو في وضع الموبايل (المشكلة هنا) --- */
 @media (max-width: 992px) {
     .nav-menu {
         position: fixed;
-        top: -100vh; /* مخفية تماماً فوق الشاشة */
+        top: -100vh; 
         left: 0;
         width: 100%;
         background: #ffffff;
         padding: 20px 0;
         transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        z-index: 1900; /* تحت الهيدر بـ 100 درجة */
+        z-index: 1900; 
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
-
-    /* عند التفعيل تنزل المنيو تحت الهيدر مباشرة */
     .nav-menu.active {
-        top: 70px; /* نفس ارتفاع الهيدر */
+        top: 70px; 
     }
 
     .nav-menu ul {
@@ -1404,6 +1344,78 @@ body {
     }
     
     .header-actions .call-btn {
+        display: none; 
+    }
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; 
+    background-color: #25d366; 
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    z-index: 9999; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.float-text {
+    position: absolute;
+    right: 70px; 
+    background: #fff;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .float-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e; 
+    box-shadow: 0 15px 30px rgba(18, 140, 126, 0.5);
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 30px;
+    }
+    .float-text {
         display: none; 
     }
 }
